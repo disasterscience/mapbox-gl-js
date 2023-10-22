@@ -139,7 +139,7 @@
             map.setStyle("mapbox://styles/mapbox/satellite-streets-v11?optimize=true");
         });
 
-        const gl = map.getCanvas().getContext("webgl2");
+        const gl = map.getCanvas().getContext("webgl");
         const ext = gl.getExtension('GMAN_webgl_memory');
         const gpu = ext.getMemoryInfo();
         let prev = gpu;

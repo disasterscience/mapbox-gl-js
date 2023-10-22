@@ -910,11 +910,6 @@ class Tile {
             delete this.texture;
         }
 
-        if (this.hillshadeFBO) {
-            this.hillshadeFBO.destroy();
-            delete this.hillshadeFBO;
-        }
-
         if (this.dem) {
             delete this.dem;
         }
