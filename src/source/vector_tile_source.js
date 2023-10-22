@@ -308,10 +308,10 @@ class VectorTileSource extends Evented implements Source {
 
     // $FlowFixMe[method-unbinding]
     unloadTile(tile: Tile) {
-        tile.unloadVectorData();
         if (tile.actor) {
             tile.actor.send('removeTile', {uid: tile.uid, type: this.type, source: this.id});
         }
+        tile.destroy();
     }
 
     hasTransition(): boolean {
